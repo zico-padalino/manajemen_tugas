@@ -2,11 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Illuminate\Http\Request;    
 
 class DashboardController extends Controller
 {
     public function index(){
-        return view('dashboard');
+        $data = array(
+            "title" => "Dashboard",
+            "menuDashboard" => "active",
+        );
+        
+        return view('dashboard',$data);
     }
 }
