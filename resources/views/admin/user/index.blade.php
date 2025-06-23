@@ -17,7 +17,7 @@
             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
-                                        <tr>
+                                        <tr class="text-center">
                                             <th>Nama</th>
                                             <th>Email</th>
                                             <th>Jabatan</th>
@@ -34,7 +34,15 @@
                                             <td>System Architect</td>
                                             <td>Edinburgh</td>
                                             <td>61</td>
-                                            <td>2011/04/25</td>
+                                            <td class="text-center">
+                                                <a href="#" class="btn btn-warning btn-sm">
+                                                    <i class="fas fa-edit"></i>
+                                                </a>
+                                                <a href="#" class="btn btn-danger btn-sm">
+                                                    <i class="fas fa-crash"></i>
+                                                </a>
+                                            </td>
+                                            
                                         </tr>
         </div>
     </div>
