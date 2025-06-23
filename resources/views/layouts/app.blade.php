@@ -20,6 +20,9 @@
     <!-- Custom styles for this template-->
     <link href="{{ asset ('sbadmin2/css/sb-admin-2.min.css') }}" rel="stylesheet">
 
+     <!-- Custom styles for this page -->
+    <link href="{{ asset('sbadmin2/vendor/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
+
 </head>
 
 <body id="page-top">
@@ -40,7 +43,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item {{ $menuDashboard ?? '' }}">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="{{ route('dashboard') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -54,8 +57,8 @@
             </div>
            
             <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+            <li class="nav-item {{ $menuAdminUser ?? '' }}">
+                <a class="nav-link" href="{{ route('user') }}">
                     <i class="fas fa-user"></i>
                     <span>Data User</span></a>
             </li>
@@ -311,6 +314,9 @@
     <script src="{{ asset('sbadmin2/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('sbadmin2/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
     <script src="{{ asset('sbadmin2/js/sb-admin-2.min.js') }}"></script>
+    <script src="{{ asset('sbadmin2/vendor/datatables/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('sbadmin2/vendor/datatables/dataTables.bootstrap4.min.js') }}"></script>
+    <script src="{{ asset('sbadmin2/js/demo/datatables-demo.js') }}"></script>
 
 </body>
 
