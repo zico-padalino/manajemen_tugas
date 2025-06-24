@@ -5,7 +5,7 @@
 <link href="{{ asset('sbadmin2/vendor/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
 
 <h1 class="h3 mb-4 text-gray-800">
-    <i class="fas fa-user mr-2"></i>
+    <i class="fas fa-tasks mr-2"></i>
     {{ $title }}
 </h1>
 
@@ -35,9 +35,9 @@
                     <tr class="text-center">
                         <th>No</th>
                         <th>Nama</th>
-                        <th>Email</th>
-                        <th>Jabatan</th>
-                        <th>Status</th>
+                        <th>Tugas</th>
+                        <th>Tanggal Mulai</th>
+                        <th>Tanggal Selesai</th>
                         <th><i class="fas fa-cog"></i></th>
                     </tr>
                 </thead>
@@ -47,12 +47,12 @@
                         <td>Zico Padalino</td>
                         <td>System Architect</td>
                         <td class="text-center">
-                            <span class="badge badge-dark badge-pill">
-                            Admin</span>
+                            <span class="badge badge-info badge-pill">
+                            01-01-2025</span>
                         </td>
                         <td class="text-center">
-                            <span class="badge badge-danger badge-pill">
-                            Belum DiTugaskan</span>
+                            <span class="badge badge-info badge-pill">
+                            01-01-2025</span>
                         </td>
                         <td class="text-center">
                             <a href="#" class="btn btn-warning btn-sm">
