@@ -11,6 +11,8 @@ class AuthController extends Controller
 {
     public function login()
     {
+       
+
         return view('auth/login');
     }
 
@@ -25,15 +27,20 @@ class AuthController extends Controller
             'password.min' => 'Password minimal 8 karakter',
         ]);
 
-        $data = array (
+        $data = array(
             'email' => $request->email,
             'password' => $request->password,
-    );
+        );
 
         if (Auth::attempt($data)) {
-            return redirect()->route('dashboard');
+            return redirect()->route('dashboard')->with('success', 'Berhasil login!');
         } else {
             return redirect()->back()->with('error', 'Email atau password salah');
         }
+    }
+
+    public function logout() {
+        Auth::logout();
+        return redirect()->route('login')->with('success', 'Berhasil logout!');
     }
 }

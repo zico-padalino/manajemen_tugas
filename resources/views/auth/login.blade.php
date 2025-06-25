@@ -95,11 +95,11 @@
     <script src="{{ asset('sbadmin2/js/sb-admin-2.min.js') }}"></script>
     <script src="{{ asset('sweetalert2/dist/sweetalert2.all.min.js') }}"></script>
 
-    @session('succes')
+    @session('success')
         <script>
             Swal.fire({
                 title: "Sukses!",
-                text: "{{ session('succes') }}",
+                text: "{{ session('success') }}",
                 icon: "success"
             });
         </script>
@@ -109,7 +109,7 @@
         <script>
             Swal.fire({
                 title: "Gagal!",
-                text: "{{ session('eror') }}",
+                text: "{{ session('error') }}",
                 icon: "error"
             });
         </script>
