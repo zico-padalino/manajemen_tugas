@@ -26,7 +26,7 @@ class DatabaseSeeder extends Seeder
         User::create([
             'nama' => 'fidya fariha',
             'email' => 'fidya.fariha@untirta.ac.id',
-            'jabatan' => 'Admin',
+            'jabatan' => 'Karyawan',
             'password' => Hash::make('fidyafariha30'),
             'is_tugas' => false,
         ]);
