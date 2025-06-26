@@ -23,5 +23,12 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('zicopadalino22'),
             'is_tugas' => false,
         ]);
+        User::create([
+            'nama' => 'fidya fariha',
+            'email' => 'fidya.fariha@untirta.ac.id',
+            'jabatan' => 'Admin',
+            'password' => Hash::make('fidyafariha30'),
+            'is_tugas' => false,
+        ]);
     }
 }

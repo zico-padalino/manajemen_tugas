@@ -41,28 +41,27 @@
                         <th><i class="fas fa-cog"></i></th>
                     </tr>
                 </thead>
+
                 <tbody>
+                    @foreach($user as $item)
                     <tr>
-                        <td class="text-center">1</td>
-                        <td>Zico Padalino</td>
-                        <td>System Architect</td>
-                        <td class="text-center">
-                            <span class="badge badge-dark badge-pill">
-                            Admin</span>
-                        </td>
-                        <td class="text-center">
-                            <span class="badge badge-danger badge-pill">
-                            Belum DiTugaskan</span>
-                        </td>
-                        <td class="text-center">
-                            <a href="#" class="btn btn-warning btn-sm">
+                         <td class="text-center">{{ $loop->iteration }}</td>  
+                         <td>{{ $item->nama }}</td>
+                         <td>
+                            <span class="badge badge-info">{{ $item->email }}</span>
+                            </td>
+                         <td>{{ $item->jabatan }}</td>
+                         <td>{{ $item->is_tugas }}</td>
+                         <td class="text-center">
+                            <a href="#" class="btn btn-sm btn-warning">
                                 <i class="fas fa-edit"></i>
                             </a>
-                            <a href="#" class="btn btn-danger btn-sm">
+                            <a href="#" class="btn btn-sm btn-danger">
                                 <i class="fas fa-trash"></i>
                             </a>
-                        </td>
-                    </tr>
+                         </td>
+                    </tr>   
+                    @endforeach
                 </tbody>
             </table>
         </div>
