@@ -135,15 +135,17 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Zico Padalino</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ auth()->user()->nama }}
+
+                                </span>
                                 <img class="img-profile rounded-circle"
-                                    src="{{ asset ('sbadmin2/img/fotozico.jpg') }}">
+                                    src="{{ asset ('sbadmin2/img/undraw_profile.svg') }}">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
                                 <div class="badge badge-success justify-content-center d-flex ml-3 mr-3 mb-2">
-                                    Admin
+                                    {{ auth()->user()->jabatan }}
                                 </div>
 
                                 </a>
@@ -198,5 +200,6 @@
     </a>
 
     
-    
+    <?php Session::forget('success'); ?>
+    <?php Session::forget('error'); ?>
    @include('layouts.footer')

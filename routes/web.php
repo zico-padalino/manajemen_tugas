@@ -20,11 +20,13 @@ Route::post('login', [AuthController::class, 'loginProses'])->name('loginProses'
 // Logout
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 
-Route::middleware('checkLogin')->group(function () {
+Route::middleware(['checkLogin','history'])->group(function () {
     // Dashboard route
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
     // User
     Route::get('user', [UserController::class, 'index'])->name('user');
+    // User Creat
+    Route::get('user/create', [UserController::class, 'create'])->name('userCreate');
     // Tugas
     Route::get('tugas', [TugasController::class, 'index'])->name('tugas');
 });
